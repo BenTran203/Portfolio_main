@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Tran</title>
+    <link rel="stylesheet" type="text/css" href="index.css"> 
+    <script src="index.js"></script> 
+    <script src="https://kit.fontawesome.com/faf2dccdeb.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("80jLIqMnG9FJraD1U");
+      })();
+    </script>
+
+</head>
+<body>
+
+    <!-- Landing Page Section -->
+    <section id="landing__page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure>
+                <img id="personal-logo" src="./assets/logo.svg" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()"><a href="#" class="nav__link--anchor link__hover--effect link__hover-effect--black">About</a></li>
+                <li class="nav__link" ><a href="#projects" class="nav__link--anchor link__hover--effect link__hover-effect--black">Project</a></li>
+                <li class="nav__link" onclick="toggleModal()"><a href="#" class="nav__link--anchor link__hover--effect link__hover-effect--black">Contact</a></li>
+                <li class="nav__link click" onclick="toggleContrast()"><a href="#" class="nav__link--anchor link__hover--effect link__hover-effect--black"><i class="fa-solid fa-circle-half-stroke"></i></a></li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title title--secondary"><span class="orange__text">I'm Ben</span></h1>
+                <p class="header__para">I'm a <span class="orange__text">fullstack developer</span> with a strong passion for building web applications with great user experience.
+                    <br>Here's a bit more <span class="orange__text">about me.</span>
+                    <br>
+                    <div class="social__list">
+                        <a href="https://www.linkedin.com/in/phuc-dat-tran-1309a5243/" target="_blank" class="social__link click"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/PumpK1ng" target="_blank" class="social__link click"><i class="fa-brands fa-github"></i></a>
+                        <a href="" target="_blank" class="social__link click"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </p>
+            </div>
+        </header>
+        <a href="#">
+          <button class="mail__btn click" onclick="toggleModal()">
+            <i class="fas fa-envelope"></i>
+          </button>
+        </a>
+        <a href="#projects" class="scroll">
+          <div class="scroll__icon click"></div>
+        </a>
+
+        <!-- MODAL -->
+        <div class="modal">
+            <div class="modal__half modal__about">  
+              <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
+              <h4 class="modal__sub--title modal__sub-title--about">Fullstack developer</h4>
+              <p class="modal__para">
+                I'm a 19 year-old Vietnamese self-study <span class="orange__text">fullstack developer</span> with a strong passion for developing website with great <span class="orange__text">user experiences.</span> 
+                <br>
+                I'm currently learning and developing my portfolio to get an intership by the time i gruaduate in <span class="orange__text">2024.</span>  
+                <br>
+                I'm experience in:
+                <div class="modal__languages">
+                  <div class="modal__language">                
+                    <i class="fa-brands fa-html5  " style="color: #e34c26;"></i>
+                      <span class="language__name">HTML</span>
+                  </div>
+                  <div class="modal__language">
+                    <i class="fa-brands fa-css3-alt " style="color: #264de4;"></i>
+                      <span class="language__name">CSS</span>             
+                  </div>
+                  <div class="modal__language">
+                    <i class="fa-brands fa-js" style="color: #f0db4f;"></i>
+                    <span class="language__name">JavaScript</span>
+                  </div>
+                  <div class="modal__language">
+                    <i class="fa-brands fa-react" style="color: #61dbfb;"></i>
+                    <span class="language__name">React</span>
+                  </div>
+                  <div class="modal__language">
+                    <i class="fa-brands fa-angular" style="color: #dd1b16;"></i>
+                    <span class="language__name">Angular</span>
+                  </div>
+                  <div class="modal__language">
+                    <i class="fa-brands fa-aws" style="color: #ff9900;"></i>
+                    <span class="language__name">Amazon web services</span>
+                  </div>
+                </div>
+              </p>
+            </div>
+          
+          <div class="modal__half modal__contact">
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+            <h3 class="modal__title modal__title--contact">Let's have a chat</h3>
+            <h4 class="modal__sub--title modal__sub-title--contact">I'm currently open to new oppertunities</h4>
+            <form id="contact__form" onsubmit="contact(event)">
+              <div class="form__item">
+                <label  clas="form__item--label" for="name">Name</label>
+                <input class="input" type="" name="user_name" value="" required>
+              </div>
+              <div class="form__item">
+                <label  clas="form__item--label" for="name">Email</label>
+                <input class="input" type="" name="user_email" value="" required>
+              </div>
+              <div class="form__item">
+                <label  clas="form__item--label" for="name">Message</label>
+                <textarea class="input" type="text" name="message" value="" required> </textarea > 
+              </div>
+              <button id="contact__submit" class="form__submit"> Send it</button>
+            </form>
+            <div class="modal__overlay modal__overlay--loading">
+              <i class="fas fa-spinner"></i>
+            </div>
+            <div class="modal__overlay modal__overlay--sucess">
+              Message successfully sent! Looking forward to reaching you soon.
+            </div>
+          </div>
+        </div>
+        <img src="./assets/semi circle.svg" class="shape shape--0" alt="">
+        <img src="./assets/circle.svg" class="shape shape--1" alt="">
+        <img src="./assets/squiggly.svg" class="shape shape--2" alt="">
+        <img src="./assets/circle.svg" class="shape shape--3" alt="">
+        <img src="./assets/triangle.svg" class="shape shape--4" alt="">
+        <img src="./assets/squiggly.svg" class="shape shape--5" alt="">
+        <img src="./assets/triangle.svg" class="shape shape--6" alt="">
+        <img src="./assets/circle.svg" class="shape shape--7" alt="">
+        <img src="./assets/squiggly.svg" class="shape shape--8" alt="">
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+          <div class="row">
+            <h1 class="section__title">
+              Here are some of my <span class="orange__text">projects</span>
+            </h1>
+            <ul class="project__list">
+              <li class="project">
+                <div class="project__wrapper">
+                  <img src="./assets/google mockup.png" class="project__img" alt="">
+                  <div class="project__wrapper--bg"></div>
+                  <div class="project__description">
+                    <h3 class="project__description--title">
+                      Google In-Store
+                    </h3>
+                    <h4 class="project__description--sub-title">
+                      Html, CSS, JavaScript, Vue, Vuex
+                    </h4>
+                    <p class="project__description--para">
+                      Google In-Store is a platform allowing Google retail employees to report any issues with their
+                      store products. Once an issue is reported, it is posted to an API which populates a separate
+                      platform's frontend - which is used by Google's vendors to fix the issue as soon as possible. I was
+                      the sole
+                      front-end developer of this application.
+                    </p>
+                    <div class="project__description--links">
+                      <a href="#" target="_blank"
+                        class="project__description--link">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                      <a href="#" target="_blank"
+                        class="project__description--link">
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a href="#" target="_blank" class="project__description--link">
+                        <i class="fas fa-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="project">
+                <div class="project__wrapper">
+                  <img src="./assets/Carsale.webp" class="project__img" alt="">
+                  <div class="project__wrapper--bg"></div>
+                  <div class="project__description">
+                    <h3 class="project__description--title">
+                      Frontend Simplified
+                    </h3>
+                    <h4 class="project__description--sub-title">
+                      Html, CSS, JavaScript, Vue, Vuex, Nuxt, Firebase
+                    </h4>
+                    <p class="project__description--para">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae cupiditate, debitis maiores, vel veniam eligendi similique amet aliquam nulla quidem aperiam libero reiciendis explicabo sapiente. Inventore a delectus libero beatae.
+                    </p>
+                    <div class="project__description--links">
+                      <a href="#" target="_blank"
+                        class="project__description--link">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                      <a href="#" target="_blank"
+                        class="project__description--link">
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a href="#" target="_blank" class="project__description--link">
+                        <i class="fas fa-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="project">
+                <div class="project__wrapper">
+                  <img src="./assets/Book_store.png" class="project__img" alt="">
+                  <div class="project__wrapper--bg"></div>
+                  <div class="project__description">
+                    <h3 class="project__description--title">
+                      E-commerce website
+                    </h3>
+                    <h4 class="project__description--sub-title">
+                      Html, CSS
+                    </h4>
+                    <p class="project__description--para">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab repudiandae expedita consectetur aspernatur doloremque, saepe molestias distinctio reprehenderit quae voluptatum nostrum! Quisquam quam earum numquam debitis explicabo quo, laborum modi.
+                    </p>
+                    <div class="project__description--links">
+                      <a href="#" target="_blank"
+                        class="project__description--link">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                      <a href="https://github.com/PumpK1ng/Ecommerce_small" target="_blank"
+                        class="project__description--link">
+                        <i class="fab fa-github"></i>
+                      </a>
+                      <a href="#" target="_blank" class="project__description--link">
+                        <i class="fas fa-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    <!-- FOOTER -->
+      <footer>
+        <div class="container">
+          <div class="row footer__row">  
+          <figure>
+            <img class="footer__logo--img" src="./assets/logo.svg" alt="">
+          </figure>
+          <div class="footer__social--list">
+            <a href="#" class="footer__social--link
+            liver__hover--effect
+            liver__hover--effect--white
+            ">
+              GitHub
+            </a>
+            <a href="#" class="footer__social--link
+            liver__hover--effect
+            liver__hover--effect--white
+            ">
+              LinkedIn
+            </a>
+            <a href="#" class="footer__social--link
+            liver__hover--effect
+            liver__hover--effect--white
+            ">
+              Email
+            </a>
+            <a href="#" class="footer__social--link
+            liver__hover--effect
+            liver__hover--effect--white
+            ">
+              Resume
+            </a>
+          </div>  
+        <div class="footer__copyright">Made by PhucDat_Tran </div>
+      </div>
+      </div>
+      </footer>
+</body>
+</html>
