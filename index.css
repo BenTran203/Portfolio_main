@@ -372,10 +372,11 @@ MODAL
   position: relative;
   display: flex;
   flex-direction: column;
-  align-self: center;
+  align-items: center;
   width: 10%;
   font-size: 60px;
   margin: 25px;
+  
 }
 
 .modal--open .modal__about,
@@ -390,6 +391,7 @@ MODAL
   transition: all 300ms ease;
   font-size: 13px;
   bottom: -30px;
+  margin-top: 100px;
 }
 
 .modal__title{
