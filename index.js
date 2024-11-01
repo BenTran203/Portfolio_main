@@ -15,22 +15,29 @@ function moveBackground(event) {
 }
 
 function contact(event) {
-    event.preventDefault();
-    const loading = document.querySelector(".modal__overlay--loading");
-    const success = document.querySelector(".modal__overlay--success");
-    loading.classList += " modal__overlay--visible";
-    emailjs
-      .sendForm(
-        "service_qat97qk",
-        "template_up1mhgn",
-        event.target,
-        "ymFPbvBYc2CRO7haa"
-      )
-      .then(() => {
-        loading.classList.remove("modal__overlay--visible");
-        success.classList += " modal__overlay--visible";
-      });
-  }
+  event.preventDefault();
+  
+  const loading = document.querySelector(".modal__overlay--loading");
+  const success = document.querySelector(".modal__overlay--success"); 
+
+  loading.classList.add("modal__overlay--visible");
+
+  emailjs
+    .sendForm(
+      "service_vqwjqfj",     
+      "template_dndk4ww",     
+      event.target,
+      "u7fH7EhEFYwHJ7RhQ"      
+    )
+    .then(() => {
+      loading.classList.remove("modal__overlay--visible");
+      success.classList.add("modal__overlay--visible");
+    })
+    .catch(() => {
+      loading.classList.remove("modal__overlay--visible");
+      alert("Oops! Something went wrong. Please try again.");
+    });
+}
 
   function toggleModal() {
     if (isModalOpen) {
