@@ -130,10 +130,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     height: 100px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for distinction */
+    z-index: 1000;
   }
 
   .nav__link--list {
@@ -148,6 +150,7 @@ nav {
     font-size: 16px;
     color: #242424;
     font-weight: 700;
+    position: relative;
   }
   
   .fa-adjust {
@@ -218,13 +221,14 @@ LANDING PAGE
 }
 
 .header{
- position: absolute;
- top: 50%;
+ position: relative;
+ top: 100px;
  left: 50%;
  transform: translate(-50%, -50%);
  width: 100%;
  max-width: 1000px;
  padding: 0 30px;
+ margin-top: 300px;
 }
 
 .title {
@@ -577,6 +581,7 @@ footer{
  background-color: #242424;
  display: flex;
  padding: 6% 0;
+ z-index: 100000;
 }
 
 .footer__row{

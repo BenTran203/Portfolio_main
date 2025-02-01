@@ -19,31 +19,33 @@
 
 </head>
 <body>
-
     <!-- Landing Page Section -->
-    <section id="landing__page" onmousemove="moveBackground(event)">
-        <nav>
-            <figure>
+    <section id="landing__page">
+      <nav>
+        <figure>
                 <img id="personal-logo" src="./assets/logo.svg" alt="">
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link" onclick="toggleModal()"><a href="#" class="nav__link--anchor link__hover--effect link__hover-effect--black">About</a></li>
-                <li class="nav__link" ><a href="#projects" class="nav__link--anchor link__hover--effect link__hover-effect--black">Project</a></li>
-                <li class="nav__link" onclick="toggleModal()"><a href="#" class="nav__link--anchor link__hover--effect link__hover-effect--black">Contact</a></li>
-                <li class="nav__link click" onclick="toggleContrast()"><a href="#" class="nav__link--anchor link__hover--effect link__hover-effect--black"><i class="fa-solid fa-circle-half-stroke"></i></a></li>
-            </ul>
+              <li class="nav__link"><a href="#" class="nav__link--anchor link__hover--effect link__hover-effect--black hover-underline">About</a></li>
+              <li class="nav__link"><a href="#projects" class="nav__link--anchor link__hover--effect link__hover-effect--black hover-underline">Projects</a></li>
+              <li class="nav__link"><a href="#" class="nav__link--anchor link__hover--effect link__hover-effect--black hover-underline">Contact</a></li>
+              <li class="nav__link click" onclick="toggleContrast()">
+                  <a href="#" class="nav__link--anchor link__hover--effect link__hover-effect--black hover-underline">
+                      <i class="fa-solid fa-circle-half-stroke"></i>
+                  </a>
+              </li>
+          </ul>
         </nav>
         <header class="header">
             <div class="header__content">
                 <h1 class="title">Hey</h1>
                 <h1 class="title title--secondary"><span class="orange__text">I'm Ben</span></h1>
-                <p class="header__para">I'm a <span class="orange__text">fullstack developer</span> who loves building web applications that are easy to use and make a difference. I enjoy working on both the front and back end to create smooth and enjoyable experiences for users.
+                <p class="header__para">I'm a <span class="orange__text">junior developer</span> who loves building web applications that are easy to use and make a difference. I enjoy working on both the front and back end to create smooth and enjoyable experiences for users.
                     <br>CHECK OUT MY <span class="orange__text">SOCIALS.</span>
                     <br>
                     <div class="social__list">
-                        <a href="https://www.linkedin.com/in/phuc-dat-tran-1309a5243/" target="_blank" class="social__link click"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/PumpK1ng" target="_blank" class="social__link click"><i class="fa-brands fa-github"></i></a>
-                        <a href="" target="_blank" class="social__link click"><i class="fa-solid fa-link"></i></a>
+                        <a href="https://www.linkedin.com/in/bentran-ph/" target="_blank" class="social__link click"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/BenTran203" target="_blank" class="social__link click"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </p>
             </div>
@@ -53,9 +55,6 @@
             <i class="fas fa-envelope"></i>
           </button>
         </a>
-        <a href="#projects" class="scroll">
-          <div class="scroll__icon click"></div>
-        </a>
 
         <!-- MODAL -->
         <div class="modal">
@@ -63,7 +62,7 @@
               <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
               <h4 class="modal__sub--title modal__sub-title--about">Fullstack developer</h4>
               <p class="modal__para">
-                I'm a 20 year-old Vietnamese self-study <span class="orange__text">fullstack developer</span> with a strong passion for developing website with great <span class="orange__text">user experiences.</span> 
+                I'm a 21 year-old Vietnamese <span class="orange__text">back-end developer</span> with a strong passion for developing website with great user experiences.  <span class="orange__text">On a journey to become a fullstack developer</span> 
                 <br>
                 I'm currently learning and developing my portfolio to get an intership by the time i gruaduate in <span class="orange__text">2025.</span>  
                 <br>
@@ -129,15 +128,6 @@
               </div>
           </div>
         </div>
-        <img src="./assets/semi circle.svg" class="shape shape--0" alt="">
-        <img src="./assets/circle.svg" class="shape shape--1" alt="">
-        <img src="./assets/squiggly.svg" class="shape shape--2" alt="">
-        <img src="./assets/circle.svg" class="shape shape--3" alt="">
-        <img src="./assets/triangle.svg" class="shape shape--4" alt="">
-        <img src="./assets/squiggly.svg" class="shape shape--5" alt="">
-        <img src="./assets/triangle.svg" class="shape shape--6" alt="">
-        <img src="./assets/circle.svg" class="shape shape--7" alt="">
-        <img src="./assets/squiggly.svg" class="shape shape--8" alt="">
     </section>
 
     <!-- Projects Section -->
@@ -194,17 +184,17 @@
                       Traveling website
                     </h3>
                     <h4 class="project__description--sub-title">
-                      Html, CSS, JavaScript, React.jsx
+                      HTML, SCSS, JavaScript, React.js, Node.js, AI API
                     </h4>
                     <p class="project__description--para">
-                      Traveling website allowed customer to search for the best experience in Australia with many suggestion, suggesting some of the best tourism destination in Austrailia.
-                    </p>
+                      A dynamic travel website that helps users explore the best experiences in Australia. It features an interactive interface built with React and SCSS and a Node.js backend for seamless data handling. The site also includes a chatbot for real-time assistance, ensuring users get personalized travel recommendations.
+                    </p>                    
                     <div class="project__description--links">
-                      <a href="https://github.com/BenTran203/Travel-site" target="_blank"
+                      <a href="https://github.com/BenTran203/Travelsite-2.0.git" target="_blank"
                         class="project__description--link">
                         <i class="fab fa-github"></i>
                       </a>
-                      <a href="https://travel-site-puce.vercel.app/" target="_blank" class="project__description--link">
+                      <a href="https://travelappdomain.com/" target="_blank" class="project__description--link">
                         <i class="fas fa-link"></i>
                       </a>
                     </div>
